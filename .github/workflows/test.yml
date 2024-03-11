@@ -1,5 +1,6 @@
 name: test
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -12,5 +13,5 @@ jobs:
         with:
           version: 2024.3.1 # [default: latest] mise version to install
           install: true # [default: true] run `mise install`
-          cache: true # [default: true] cache mise using GitHub's cache
+          cache: false # [default: true] cache mise using GitHub's cache
           experimental: true # [default: false] enable experimental features
